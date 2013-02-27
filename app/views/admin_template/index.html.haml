@@ -1,0 +1,32 @@
+%div.tabbable
+  %ul.nav.nav-tabs
+    %li
+      =link_to "HOME", "#tab1", {"data-toogle" => "tab1"}
+    %li.active
+      =link_to "REPORTS", "#tab2", {"data-toogle" => "tab2"}
+      %ul
+    %li
+      =link_to "PRODUCTS", "#tab3", {"data-toogle" => "tab3"}
+    %li
+      =link_to "CUSTOMERS", "#tab4", {"data-toogle" => "tab4"}
+  %div.tab-content
+    %div#tab1.tab-pane.active
+      %ul.nav.nav-pills
+        %li
+          =link_to "At a glance"
+        %li.active
+          =link_to "Sales"
+        %li
+          =link_to "At a glance"
+        %li
+          =link_to "Stock"
+        %li
+          =link_to "Payments"
+        %li
+          =link_to "Staff"
+        %li
+          =link_to "Customers"
+    %div#tab2.tab-pane
+    %div#tab3.tab-pane
+    %div#tab4.tab-pane
+%div#form.section
