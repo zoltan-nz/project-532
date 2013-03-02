@@ -1,10 +1,13 @@
 !!!
 %html
   %head
-    %title ClueyTask
+    %title Project 532
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %div.logo
-    = yield
+    %div.container
+      %div.navbar
+        %div.navbar-inner
+          =link_to "PROJECT 532", root_url, class: "brand"
+      = yield
