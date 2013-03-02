@@ -1,6 +1,7 @@
 ClueyTask::Application.routes.draw do
 
-  get "admin_template/index"
+  resource :templates
+
 
   root to: "home#index"
 

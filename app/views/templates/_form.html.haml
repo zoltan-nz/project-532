@@ -1,0 +1,7 @@
+%div.well
+  =form_tag "#", class: "form" do
+    =label_tag :q, "Search for:"
+    =text_field_tag :q
+    =check_box_tag :something, "Haho"
+    =radio_button_tag :age, "Again"
+    =submit_tag "Search", class: "btn"
