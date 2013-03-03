@@ -86,6 +86,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.1)
+    pg (0.14.1)
+    pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
     puma (1.6.3)
       rack (~> 1.2)
@@ -154,6 +156,7 @@ DEPENDENCIES
   haml-rails
   hirb
   jquery-rails
+  pg
   puma
   rails
   sass-rails
