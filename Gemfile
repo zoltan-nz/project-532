@@ -4,8 +4,6 @@ gem 'rails'
 
 # Bundle edge Rails instead:
 
-gem 'sqlite3'
-
 gem 'haml'
 gem 'haml-rails'
 
@@ -32,17 +30,20 @@ end
 gem 'jquery-rails'
 
 group :development do
-    #more detailed error message
-    gem 'better_errors'
+  gem 'sqlite3'
 
-    platforms :ruby do
-      gem 'debugger'
-      gem 'binding_of_caller' #Not compatible with jruby
-    end
+  #more detailed error message
+  gem 'better_errors'
 
-    #for fancy console
-    gem 'awesome_print'
-gem 'hirb'
+  platforms :ruby do
+    gem 'debugger'
+    gem 'binding_of_caller' #Not compatible with jruby
+  end
+
+  #for fancy console
+  gem 'awesome_print'
+  gem 'hirb'
+
 end
 
 group :production do
