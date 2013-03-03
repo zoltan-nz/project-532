@@ -14,3 +14,6 @@ $ ->
     $(@).tab "show"
 
   $(".tab-pane a:eq(1)").click()
+
+$ ->
+  $('[data-behaviour~=datepicker]').datepicker()

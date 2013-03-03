@@ -11,6 +11,7 @@ gem 'haml-rails'
 
 gem 'bootstrap-sass'
 gem 'formtastic-bootstrap'
+gem 'bootstrap-datepicker-rails'
 
 gem 'formtastic'
 

@@ -1,8 +1,30 @@
 %div.well
   =form_tag "#", class: "form-inline" do
-    =label_tag :q, "Location:"
-    =select_tag :q
-    =text_field_tag :q
-    =check_box_tag :something, "Haho"
-    =radio_button_tag :age, "Again"
-    =submit_tag "Search", class: "btn"
+    %div.control-group.controls-row
+      =label_tag :q, "Location:", class: 'control-label span1'
+      =select_tag :location, options_for_select([["All Locations", 0], ["Location 1", 1], ["Location 2", 2], ["Location 3", 3]]), class: 'span2'
+      =label_tag :q, "Category:", class: 'span1'
+      =select_tag :location, options_for_select([["All Categories", 0], ["Location 1", 1], ["Location 2", 2], ["Location 3", 3]]), class: 'span2'
+    %div.control-group.controls-row
+      =label_tag :q, "Product:", class: 'span1'
+      =select_tag :location, options_for_select([["All Products", 0], ["Location 1", 1], ["Location 2", 2], ["Location 3", 3]]), class: 'span2'
+      =label_tag :q, "From:", class: 'span1'
+      =text_field_tag :date, '', {class: 'input-small span2', "data-behaviour" => "datepicker"}
+      =label_tag :q, "To:", class: 'span1'
+      =text_field_tag :date, '', {class: 'input-small span2', "data-behaviour" => "datepicker"}
+      =submit_tag "Update", class: "btn span2"
+    %div.control-group.controls-row.btn-toolbar
+      %div.span7
+      %div.btn-group.span3
+        %a.btn
+          %i.icon-home
+          Home
+        %a.btn
+          %i.icon-ok
+          Save
+        %a.btn
+          %i.icon-print
+          Print
+        %a.btn
+          %i.icon-tasks
+          Excel
