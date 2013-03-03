@@ -1,6 +1,7 @@
 %div.well
-  =form_tag "#", class: "form" do
-    =label_tag :q, "Search for:"
+  =form_tag "#", class: "form-inline" do
+    =label_tag :q, "Location:"
+    =select_tag :q
     =text_field_tag :q
     =check_box_tag :something, "Haho"
     =radio_button_tag :age, "Again"
