@@ -1,7 +1,6 @@
 == TASKS
 
-1. Management interface template
+Admin for template management
 
 2. Image search with tags in db and in google images, import image through google api
 
-3. Deploying to Amazon elastic beanstalk
