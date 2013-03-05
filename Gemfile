@@ -44,6 +44,10 @@ group :development do
   gem 'awesome_print'
   gem 'hirb'
 
+  gem 'linecache19'
+  gem 'ruby-debug-ide'
+  gem 'ruby-debug-base19x'
+
 end
 
 group :production do
