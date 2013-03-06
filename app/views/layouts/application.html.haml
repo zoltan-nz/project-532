@@ -10,4 +10,9 @@
       %div.navbar
         %div.navbar-inner
           =link_to "PROJECT 532", root_url, class: "brand"
+      %div.container
+        -flash.each do |key, value|
+          =content_tag(:div, value, class: "alert alert-#{key}")
       = yield
+    %footer.container
+      =debug(params) if Rails.env.development?

@@ -35,18 +35,14 @@ group :development do
   #more detailed error message
   gem 'better_errors'
 
-  platforms :ruby do
-    gem 'debugger'
-    gem 'binding_of_caller' #Not compatible with jruby
-  end
+
+  gem 'debugger'
+  gem 'binding_of_caller' #Not compatible with jruby
+
 
   #for fancy console
   gem 'awesome_print'
   gem 'hirb'
-
-  gem 'linecache19'
-  gem 'ruby-debug-ide'
-  gem 'ruby-debug-base19x'
 
 end
 

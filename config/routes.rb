@@ -1,9 +1,12 @@
-ClueyTask::Application.routes.draw do
+Project532::Application.routes.draw do
 
   resource :templates
 
-
   root to: "home#index"
+
+  namespace :admin do
+    resources :templates
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
