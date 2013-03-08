@@ -4,5 +4,5 @@ Admin for template management
 - add admin namespace
 - extending model for template
 
-2. Image search with tags in db and in google images, import image through google api
+Image search with tags in db and in google images, import image through google api
 
