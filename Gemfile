@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+ruby "2.0.0"
 
-# Bundle edge Rails instead:
+gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
+
+gem 'rails', '4.0.0.beta1'
 
 gem 'haml'
 gem 'haml-rails'
@@ -15,35 +17,42 @@ gem 'formtastic'
 
 gem 'puma'
 
-# Gemssed only for assets and not required
-# in production environments by default.
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier'
+  gem 'sass-rails',   '~> 4.0.0.beta1'
+  gem 'coffee-rails', '~> 4.0.0.beta1'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.0.1'
+
+gem 'devise'
+gem 'figaro'
 
 group :development do
   gem 'sqlite3'
-
   #more detailed error message
   gem 'better_errors'
-
-
   gem 'debugger'
   gem 'binding_of_caller' #Not compatible with jruby
-
-
   #for fancy console
   gem 'awesome_print'
   gem 'hirb'
+end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'quiet_assets'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'cucumber-rails'
+  gem 'launchy'
+  gem 'capybara'
 end
 
 group :production do
