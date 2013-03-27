@@ -29,7 +29,7 @@ gem 'devise'
 gem 'figaro'
 
 group :development do
-  gem 'sqlite3', ''
+  gem 'sqlite3', '1.3.7'
   #more detailed error message
   gem 'better_errors'
   gem 'debugger'
