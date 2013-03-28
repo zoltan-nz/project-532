@@ -1,5 +1,6 @@
 Project532::Application.routes.draw do
 
+  resource :products
   resource :templates
 
   root to: "home#index"

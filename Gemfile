@@ -4,6 +4,8 @@ ruby "2.0.0"
 
 gem 'rails', '4.0.0.beta1'
 
+#gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
+
 gem 'haml'
 gem 'haml-rails'
 
