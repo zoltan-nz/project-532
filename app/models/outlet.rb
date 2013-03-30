@@ -1,20 +1,16 @@
-class PricingLabel < ActiveRecord::Base
+class Outlet < ActiveRecord::Base
   belongs_to :business
 
-  has_many :product_pricings
-
-  validates_presence_of :label
+  has_many :product_unavailabilities
 end
-
 
 # == Schema Information
 #
-# Table name: pricing_labels
+# Table name: outlets
 #
 #  id          :integer(4)      not null, primary key
-#  label       :string(255)
+#  name        :string(255)
 #  business_id :integer(4)
-#  tax_id      :integer(4)
 #  created_at  :datetime
 #  updated_at  :datetime
 #
