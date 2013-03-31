@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  layout "products"
+  layout 'products'
 
   def index
   end
