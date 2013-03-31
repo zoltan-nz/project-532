@@ -11,7 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130327163729) do
+ActiveRecord::Schema.define(version: 20130328170301) do
+
+  create_table "businesses", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.integer  "business_id"
+    t.integer  "department_id"
+    t.integer  "parent_category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["business_id"], name: "index_categories_on_business_id"
+  add_index "categories", ["department_id"], name: "index_categories_on_department_id"
+
+  create_table "departments", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "outlets", force: true do |t|
+    t.string   "name"
+    t.integer  "business_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "outlets", ["business_id"], name: "index_outlets_on_business_id"
 
   create_table "pricing_labels", force: true do |t|
     t.string   "label"
@@ -50,6 +83,16 @@ ActiveRecord::Schema.define(version: 20130327163729) do
     t.datetime "updated_at"
   end
 
+  create_table "product_unavailabilities", force: true do |t|
+    t.integer  "outlet_id"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "product_unavailabilities", ["outlet_id"], name: "index_product_unavailabilities_on_outlet_id"
+  add_index "product_unavailabilities", ["product_id"], name: "index_product_unavailabilities_on_product_id"
+
   create_table "product_variants", force: true do |t|
     t.string   "variant_type"
     t.string   "variant_value"
@@ -62,6 +105,17 @@ ActiveRecord::Schema.define(version: 20130327163729) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "taxes", force: true do |t|
+    t.integer  "business_id"
+    t.string   "label"
+    t.float    "tax_1"
+    t.float    "tax_2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taxes", ["business_id"], name: "index_taxes_on_business_id"
 
   create_table "templates", force: true do |t|
     t.string   "name"
