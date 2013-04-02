@@ -1,0 +1,22 @@
+%section.row.main
+  .container
+    .span12
+      =simple_form_for :query, method: :get, html: {class: 'form-inline'} do |f|
+        =f.input :department, as: :select, collection: @departments, label: 'Outlet', class: 'form-inline'
+        =f.input :filter, as: :radio, collection: ['All products', 'Special', 'Deleted'], label: 'Filter', html: {class: 'form-inline'}
+        =f.input :category
+        =f.button :submit, class: 'btn'
+      =form_for :query do |f|
+        =f.label 'Outlet'
+
+
+      =form_tag "/products", method: :get, class: 'form-inline' do
+        =label_tag :q, "Search for:"
+        =text_field_tag :q
+        =submit_tag "Search", class: 'btn'
+
+
+
+
+
+

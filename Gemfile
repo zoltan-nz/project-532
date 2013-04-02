@@ -9,13 +9,16 @@ gem 'rails', '4.0.0.beta1'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'formtastic'
+gem 'simple_form'
+
 gem 'bootstrap-sass'
 gem 'formtastic-bootstrap'
 gem 'bootstrap-datepicker-rails'
 
-gem 'formtastic'
-
 gem 'puma'
+
+gem 'rubymine_heaven'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'

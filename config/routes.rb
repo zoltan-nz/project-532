@@ -1,9 +1,12 @@
 Project532::Application.routes.draw do
 
-  resource :products
+  #resource :products
+
   resource :templates
 
   root to: "home#index"
+  get 'products' => 'products#show'
+  post 'products' => 'products#show'
 
   namespace :admin do
     resources :templates
