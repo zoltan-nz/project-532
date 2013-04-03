@@ -1,22 +1,30 @@
-%section.row.main
-  .container
-    .span12
-      =simple_form_for :query, method: :get, html: {class: 'form-inline'} do |f|
-        =f.input :department, as: :select, collection: @departments, label: 'Outlet', class: 'form-inline'
-        =f.input :filter, as: :radio, collection: ['All products', 'Special', 'Deleted'], label: 'Filter', html: {class: 'form-inline'}
-        =f.input :category
-        =f.button :submit, class: 'btn'
-      =form_for :query do |f|
-        =f.label 'Outlet'
-
-
-      =form_tag "/products", method: :get, class: 'form-inline' do
-        =label_tag :q, "Search for:"
-        =text_field_tag :q
-        =submit_tag "Search", class: 'btn'
-
-
-
-
-
-
+%section.container.main
+  .row
+    =semantic_form_for :query, method: :get, namespace: 'first', html: {class: 'form-inline'} do |f|
+      -#=f.semantic_errors :flash
+      .span5
+        =f.input :department, as: :select, collection: @departments, label: 'Outlet'
+      .span2
+        =f.action :submit, as: :button, label: 'Add new product'
+      .span4.offset1
+        .btn-group{'data-toggle' => 'buttons-radio'}
+          %button.btn{type: 'button'} All products
+          %button.btn{type: 'button'} Specials
+          %button.btn{type: 'button'} Delete
+  .row
+    .span2
+      All Categories
+      %ul.nav.nav-tabs.nav-stacked
+        %li.active
+          %a Drinks Dept.
+        %li Bottled Beer
+        %li Draught
+        %li Cocktails
+        %li Spirits
+        %li Soft Drinks
+    .span2
+      Products
+    .span8
+      General
+      Pricing & Taxes
+      Modfiers

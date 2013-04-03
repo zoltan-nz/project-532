@@ -1,5 +1,8 @@
+require 'simple_form_extensions'
+
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
+
   # Components used by the form builder to generate a complete input. You can remove
   # any of them, change the order, or even add your own components to the stack.
   # config.components = [ :placeholder, :label_input, :hint, :error ]
@@ -56,7 +59,7 @@ SimpleForm.setup do |config|
   config.label_class = 'control-label'
 
   # You can define the class to use on all forms. Default is simple_form.
-  config.form_class = :form
+  config.form_class = 'simple_form form-horizontal'
 
   # Whether attributes are required by default (or not). Default is true.
   config.required_by_default = false

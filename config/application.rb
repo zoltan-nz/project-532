@@ -21,5 +21,9 @@ module Project532
       g.javascript = false
       g.helper = false
     end
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    config.autoload_paths += %W(#{config.root}/lib/extras)
   end
 end
