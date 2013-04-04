@@ -8,9 +8,7 @@ Project532::Application.routes.draw do
   get 'products' => 'products#show'
   post 'products' => 'products#show'
 
-  namespace :admin do
-    resources :templates
-  end
+  get 'admin' => 'admin#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

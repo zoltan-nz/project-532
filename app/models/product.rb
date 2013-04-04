@@ -6,6 +6,10 @@ class Product < ActiveRecord::Base
   has_many :product_pricings
   has_many :product_unavailabilities
 
+  has_many :product_pricings
+
+
+
   validates_presence_of :name
   validates_uniqueness_of :name
 end

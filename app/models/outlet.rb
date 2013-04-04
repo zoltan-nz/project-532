@@ -1,5 +1,6 @@
 class Outlet < ActiveRecord::Base
   belongs_to :business
+  belongs_to :pricing_band
 
   has_many :product_unavailabilities
 end

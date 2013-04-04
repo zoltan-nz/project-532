@@ -2,12 +2,18 @@ class ProductPricing < ActiveRecord::Base
   #if this is null then it is a business level pricing
   belongs_to :outlet
 
-  belongs_to :product
+  belongs_to :pricing_band
+
   belongs_to :pricing_label
   belongs_to :product_size
   has_many :product_pricing_variants
 end
 
+#the query for products can look something like:
+#current_tenant.products.all - current_outlet.product_unavailabilities
+#
+#Product.product_pricings.where("outlet_id = #{current_outlet.id}")
+#Product.product_pricings.where("business_id = #{current_business.id}")
 
 # == Schema Information
 #

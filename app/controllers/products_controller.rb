@@ -6,9 +6,9 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @departments = Department.all
-    @categories = Category.all
-    @products = Product.all
+    @departments ||= Department.all
+    @categories ||= Category.all
+    @products ||= Product.all
 
 
   end
