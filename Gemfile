@@ -10,6 +10,8 @@ gem 'inherited_resources'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'slim-rails', github: 'slim-template/slim-rails'
+
 gem 'formtastic'
 gem 'simple_form'
 
@@ -20,6 +22,8 @@ gem 'bootstrap-datepicker-rails'
 gem 'puma'
 
 gem 'rubymine_heaven'
+
+gem 'annotate'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
@@ -35,7 +39,7 @@ gem 'devise'
 gem 'figaro'
 
 group :development do
-  gem 'sqlite3', '1.3.7'
+  gem 'sqlite3'
   #more detailed error message
   gem 'better_errors'
   gem 'debugger'
@@ -46,12 +50,12 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'quiet_assets'
 end
 
 group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'cucumber-rails'

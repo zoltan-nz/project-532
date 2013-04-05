@@ -11,7 +11,7 @@
 
 # Should all fields be considered "required" by default?
 # Defaults to true.
-Formtastic::FormBuilder.all_fields_required_by_default = false
+# Formtastic::FormBuilder.all_fields_required_by_default = true
 
 # Should select fields have a blank option/prompt by default?
 # Defaults to true.
@@ -64,14 +64,13 @@ Formtastic::FormBuilder.all_fields_required_by_default = false
 
 # You can add custom inputs or override parts of Formtastic by subclassing Formtastic::FormBuilder and
 # specifying that class here.  Defaults to Formtastic::FormBuilder.
-Formtastic::Helpers::FormHelper.builder = FormtasticBootstrap::FormBuilder
+# Formtastic::Helpers::FormHelper.builder = MyCustomBuilder
 
 # You can opt-in to Formtastic's use of the HTML5 `required` attribute on `<input>`, `<select>` 
 # and `<textarea>` tags by setting this to false (defaults to true).
-Formtastic::FormBuilder.use_required_attribute = false
+# Formtastic::FormBuilder.use_required_attribute = true
 
 # You can opt-in to new HTML5 browser validations (for things like email and url inputs) by setting
 # this to false. Doing so will add a `novalidate` attribute to the `<form>` tag.
 # See http://diveintohtml5.org/forms.html#validation for more info.
 # Formtastic::FormBuilder.perform_browser_validations = true
-
