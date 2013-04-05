@@ -8,11 +8,12 @@ class ProductSize < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: product_sizes
 #
-#  id               :integer(4)      not null, primary key
+#  id               :integer(8)      not null, primary key
 #  label            :string(255)
 #  business_id      :integer(4)
 #  stock_multiplier :float           default(1.0), not null

@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
   def index
-      @product = Product.new
+      @business = Business.new
   end
 
 end

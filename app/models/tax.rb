@@ -4,11 +4,12 @@ class Tax < ActiveRecord::Base
 
 end
 
+
 # == Schema Information
 #
 # Table name: taxes
 #
-#  id          :integer(4)      not null, primary key
+#  id          :integer(8)      not null, primary key
 #  business_id :integer(4)
 #  label       :string(255)
 #  tax_1       :float

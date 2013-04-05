@@ -7,11 +7,12 @@ class PricingLabel < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: pricing_labels
 #
-#  id          :integer(4)      not null, primary key
+#  id          :integer(8)      not null, primary key
 #  label       :string(255)
 #  business_id :integer(4)
 #  tax_id      :integer(4)

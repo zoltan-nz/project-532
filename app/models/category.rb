@@ -13,11 +13,12 @@ class Category < ActiveRecord::Base
   validates_uniqueness_of :name
 end
 
+
 # == Schema Information
 #
 # Table name: categories
 #
-#  id              :integer(4)      not null, primary key
+#  id              :integer(8)      not null, primary key
 #  name            :string(255)
 #  business_id     :integer(4)
 #  department_id   :integer(4)

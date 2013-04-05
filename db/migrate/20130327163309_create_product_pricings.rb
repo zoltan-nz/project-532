@@ -5,7 +5,9 @@ class CreateProductPricings < ActiveRecord::Migration
       t.references :pricing_label, index: true
       t.references :product_size, index: true
       t.references :tax, index: true
-      t.references :outlet, index: true
+      t.references :pricing_band, index: true
+
+      t.decimal :price, precision: 10, scale: 2
 
       t.timestamps
     end

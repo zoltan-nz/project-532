@@ -8,11 +8,12 @@ class ProductVariant < ActiveRecord::Base
 end
 
 
+
 # == Schema Information
 #
 # Table name: product_variants
 #
-#  id            :integer(4)      not null, primary key
+#  id            :integer(8)      not null, primary key
 #  business_id   :integer(4)
 #  variant_type  :string(255)
 #  variant_value :string(255)

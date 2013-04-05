@@ -15,16 +15,18 @@ end
 #Product.product_pricings.where("outlet_id = #{current_outlet.id}")
 #Product.product_pricings.where("business_id = #{current_business.id}")
 
+
 # == Schema Information
 #
 # Table name: product_pricings
 #
-#  id               :integer(4)      not null, primary key
+#  id               :integer(8)      not null, primary key
 #  product_id       :integer(4)
 #  pricing_label_id :integer(4)
 #  product_size_id  :integer(4)
 #  tax_id           :integer(4)
-#  outlet_id        :integer(4)
+#  pricing_band_id  :integer(4)
+#  price            :decimal(10, 2)
 #  created_at       :datetime
 #  updated_at       :datetime
 #

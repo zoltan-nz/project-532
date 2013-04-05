@@ -2,11 +2,11 @@ Project532::Application.routes.draw do
 
   #resource :products
 
-  resource :templates
+  resource :templates, :businesses, :categories, :departments, :outlets, :pricing_bands, :pricing_labels, :products, :product_pricings, :product_pricing_variants, :product_sizes, :product_unavailabilities, :product_variants, :taxes
 
   root to: "home#index"
-  get 'products' => 'products#show'
-  post 'products' => 'products#show'
+  #get 'products' => 'products#show'
+  #post 'products' => 'products#show'
 
   get 'admin' => 'admin#index'
 

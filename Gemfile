@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '4.0.0.beta1'
+gem 'inherited_resources'
 
 #gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
 
