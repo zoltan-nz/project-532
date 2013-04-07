@@ -1,0 +1,13 @@
+.container-fluid
+  %h1 Departments
+  %table.table.table-bordered#departments
+    %tr
+      %th Name
+      %th Action
+      %th Action
+    =render @departments
+  =semantic_form_for Department.new, remote: true do |f|
+    .row
+      .span3=f.input :name, label: '', require: false
+      .span3=f.action :submit, class: 'btn'
+      .span3#error-message

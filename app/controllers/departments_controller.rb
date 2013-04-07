@@ -1,5 +1,7 @@
 class DepartmentsController < ApplicationController
+  layout 'backend'
   before_action :set_department, only: [:show, :edit, :update, :destroy]
+  respond_to :html, :json, :js
 
   # GET /departments
   def index
@@ -17,32 +19,40 @@ class DepartmentsController < ApplicationController
 
   # GET /departments/1/edit
   def edit
+    respond_to :js
   end
 
   # POST /departments
   def create
     @department = Department.new(department_params)
 
-    if @department.save
-      redirect_to @department, notice: 'Department was successfully created.'
-    else
-      render action: 'new'
+    @department.save
+    respond_to do |format|
+      format.js {}
     end
   end
 
   # PATCH/PUT /departments/1
   def update
-    if @department.update(department_params)
-      redirect_to @department, notice: 'Department was successfully updated.'
-    else
-      render action: 'edit'
+
+    #respond_with @department
+    respond_to do |format|
+      if @department.update(department_params)
+        format.json {head :ok}
+      else
+        format.json { render json: @department.errors.full_messages, status: :unprocessable_entity}
+      end
     end
   end
 
   # DELETE /departments/1
   def destroy
     @department.destroy
-    redirect_to departments_url, notice: 'Department was successfully destroyed.'
+    respond_to do |format|
+      format.html {redirect_to departments_url, notice: 'Department was successfully destroyed.'}
+      format.json {head :ok}
+      format.js
+    end
   end
 
   private

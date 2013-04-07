@@ -1,6 +1,6 @@
 %ul.breadcrumb
   %li HOME
   %span.divider >
-  %li Products
+  %li=link_to #{controller_name}, controller_path
   %span.divider >
-  %li.active=link_to 'Products list', '#'
+  %li.active=link_to action_name, "#"

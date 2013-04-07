@@ -1,2 +1,92 @@
-%h1 Products#index
-%p Find me in app/views/products/index.html.haml
+%section.container.main
+  =semantic_form_for :query, method: :get, namespace: 'first', html: {class: 'form-inline'} do |f|
+    .row
+      -#=f.semantic_errors :flash
+      .span5
+        =f.input :department, as: :select, collection: @departments, label: 'Outlet'
+      .span2
+        =f.action :submit, as: :button, label: 'Add new product'
+      .span4.offset1
+        .btn-group{'data-toggle' => 'buttons-radio'}
+          %a.btn{type: 'button'} All products
+          %a.btn{type: 'button'} Specials
+          %a.btn{type: 'button'} Delete
+    .row
+      .span2
+        %h4 All Categories
+        %ul.nav.nav-tabs.nav-stacked
+          %li.active
+            %a.bold Drinks Dept.
+          %li
+            %a Bottled Beer
+          %li
+            %a Draught
+          %li
+            %a Cocktails
+          %li
+            %a Spirits
+          %li
+            %a Soft Drinks
+      .span2
+        %h4 Products
+        %ul.nav.nav-pills.nav-stacked
+          %li.active
+            %a 7UP
+          %li
+            %a Brandy
+          %li
+            %a Budweiser Pint
+          %li
+            %a Carlsberg Pint
+          %li
+            %a Crisps
+          %li
+            %a Guinness Pint
+          %li
+            %a Peanuts
+          %li
+            %a Soup & Sandwich
+          %li
+            %a Vodka
+          %li
+            %a Water
+
+      .span8.accordion#accordion2
+        .accordion-group
+          .accordion-heading
+            %a.accordion-toggle{'data-toggle' => 'collapse', 'data-parent' => '#accordion2',  href: '#collapseOne'} General
+          #collapseOne.accordion-body.collapse.in
+            .accordion-inner
+              .row
+                .span4
+                  =f.input @products.name, as: :select, label: 'Product Name'
+                  =f.input @products.name, as: :select, label: 'Product Category'
+                  =f.input @products.name,              label: 'Standard Price'
+                  =f.input :something, as: :check_boxes, label: 'Fourth Line', collection: ['First', 'Second', 'Third']
+                  =f.input :somthing2, as: :check_boxes
+
+                .span2
+                  .row
+                    .span1
+                      =image_tag 'carlsberg.png'
+                    .span1
+                      %a.btn Upload Image
+                      %a.btn Using Galery
+                .span1
+                  .well AVAILABLE IN
+
+        .accordion-group
+          .accordion-heading
+            %a.accordion-toggle{'data-toggle' => 'collapse', 'data-parent' => '#accordion2',  href: '#collapseTwo'} Pricing & Taxes
+          #collapseTwo.accordion-body.collapse
+            .accordion-inner
+              =f.input :pricelist, as: :select, label: 'Product Name'
+
+        .accordion-group
+          .accordion-heading
+            %a.accordion-toggle{'data-toggle' => 'collapse', 'data-parent' => '#accordion2',  href: '#collapseThree'} General
+          #collapseThree.accordion-body.collapse
+            .accordion-inner
+              Product Name
+              Product Category
+              Standard Price

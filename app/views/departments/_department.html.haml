@@ -1,0 +1,5 @@
+%tr{id: "department_#{department.id}"}
+  %td=best_in_place department, :name, type: :input
+  %td=link_to 'Edit', edit_department_path(department), class: 'btn', remote: true
+  %td=link_to 'Delete', department, method: :delete, class: 'btn', remote: true
+  -@department = department

@@ -3,27 +3,19 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '4.0.0.beta1'
-gem 'inherited_resources'
 
 #gem 'rails4_upgrade', github: 'alindeman/rails4_upgrade'
 
 gem 'haml'
 gem 'haml-rails'
 
-gem 'slim-rails', github: 'slim-template/slim-rails'
-
 gem 'formtastic'
-gem 'simple_form'
 
 gem 'bootstrap-sass'
 gem 'formtastic-bootstrap'
 gem 'bootstrap-datepicker-rails'
 
 gem 'puma'
-
-gem 'rubymine_heaven'
-
-gem 'annotate'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
@@ -32,6 +24,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem 'best_in_place', github: 'szines/best_in_place'
+
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 

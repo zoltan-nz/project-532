@@ -1,0 +1,3 @@
+=semantic_form_for @department, remote: true do |f|
+  =f.input :name, label: @department.name, require: false
+  =f.action :submit, class: 'btn'

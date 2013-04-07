@@ -25,5 +25,6 @@ module Project532
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
     config.autoload_paths += %W(#{config.root}/lib/extras)
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
