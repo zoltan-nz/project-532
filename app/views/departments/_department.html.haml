@@ -1,5 +1,5 @@
 %tr{id: "department_#{department.id}"}
-  %td=best_in_place department, :name, type: :input, :activator => "#activator-#{department.id}"
+  %td=best_in_place department, :name, type: :input, ok_button: "OK", ok_button_class: 'btn', :activator => "#activator-#{department.id}"
   %td=link_to 'Edit', edit_department_path(department), id: "activator-#{department.id}", class: 'btn', remote: true
   %td=link_to 'Delete', department, method: :delete, class: 'btn', remote: true, data: { confirm: 'Are you sure?' }
   -@department = department
