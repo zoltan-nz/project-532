@@ -41,7 +41,21 @@ group :development do
   gem 'debugger'
   gem 'binding_of_caller' #Not compatible with jruby
   #for fancy console
+
+  #More details: https://github.com/michaeldv/awesome_print
+  #Add your ~/.irbrc file:
+  #require "awesome_print"
+  #AwesomePrint.irb!
   gem 'awesome_print'
+
+  #More details: https://github.com/cldwalker/hirb
+  #Type in your console: Hirb.enable
+  #Or extend your ~/.irbrc file with the following:
+  #  require 'rubygems'
+  #  require 'hirb'
+  #  require 'active_record'
+  #  Hirb.enable
+  #  ActiveRecord::Base.logger = Logger.new(STDOUT)
   gem 'hirb'
 end
 
@@ -62,3 +76,4 @@ end
 group :production do
   gem 'pg'
 end
+
