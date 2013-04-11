@@ -27,9 +27,8 @@ class DepartmentsController < ApplicationController
     @department = Department.new(department_params)
 
     @department.save
-    respond_to do |format|
-      format.js {}
-    end
+    respond_to :js
+
   end
 
   # PATCH/PUT /departments/1
