@@ -4,8 +4,5 @@
 <% else %>
   $('table#departments').append("<%= escape_javascript(render @department)%>")
   $('tr#<%= dom_id(@department) %>').effect('highlight')
-  testthing = 'HelloBello'
-  square = (x) -> x * x
-  cube = (x) -> square(x) * x
-  $('input#department_name').val(cube(3))
+  $('input#department_name').val('')
 <% end %>
