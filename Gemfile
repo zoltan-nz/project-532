@@ -57,20 +57,29 @@ group :development do
   #  Hirb.enable
   #  ActiveRecord::Base.logger = Logger.new(STDOUT)
   gem 'hirb'
+
+  gem 'guard-livereload'
+  gem 'rack-livereload'
+
+  gem 'rb-fsevent'
+  gem 'rb-inotify'
 end
 
 group :development, :test do
   gem 'quiet_assets'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec-rails'
+
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'cucumber-rails'
   gem 'launchy'
   gem 'capybara'
+
+  gem 'guard-rspec'
 end
 
 group :production do
