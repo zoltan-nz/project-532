@@ -1,3 +1,11 @@
-=semantic_form_for @department, remote: true do |f|
-  =f.input :name, label: @department.name, require: false
-  =f.action :submit, class: 'btn'
+#formModal.modal.hide.fade{role: 'dialog', 'aria-labelledby' => 'New Department', 'aria-hidden' => 'false'}
+  .modal-header
+    %a.close{type: 'button', data:{dismiss: 'modal'}, 'aria-hidden' => 'true'} &times;
+    %h3#createModalLabel Create a New Department
+  =semantic_form_for Department.new, remote: true do |f|
+    .modal-body
+      =f.input :name, label: 'Name:', require: true
+      #error-message
+    .modal-footer
+      %a.btn.btn-large.btn-danger{data: {dismiss: 'modal'}, 'aria-hidden' => 'true'} Close
+      =f.action :submit, :button_html => {class:'btn btn-primary btn-large'}

@@ -1,8 +1,8 @@
 <% if @department.new_record? %>
   $('input#department_name').effect('highlight', {color: 'red'})
-  $('#error-message').html("<%= @department.errors.full_messages %>")
+  $('#error-message').html("<%= @department.errors.full_messages.each {|msg| msg}.join(', ') %>").fadeIn().effect('highlight', {color: 'red'})
 <% else %>
   $('table#departments').append("<%= escape_javascript(render @department)%>")
   $('tr#<%= dom_id(@department) %>').effect('highlight')
-  $('input#department_name').val('')
+  $("#formModal").modal('hide')
 <% end %>

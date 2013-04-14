@@ -1,13 +1,12 @@
 .container
   %h1 Departments
+  .well{style: 'height: 50px'}
+    .pull-left Create a new department or edit your list
+    %a.pull-right.btn.btn-success.btn-large{data: {toggle: 'modal'}, href: '#formModal'} New Department
   %table.table.table-bordered#departments
     %tr
       %th Name
-      %th Action
-      %th Action
+      %th Edit
+      %th Delete
     =render @departments
-  =semantic_form_for Department.new, remote: true do |f|
-    .row
-      .span3=f.input :name, label: '', require: false
-      .span3=f.action :submit, class: 'btn'
-      .span3#error-message
+  =render 'form'
