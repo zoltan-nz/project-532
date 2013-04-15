@@ -1,6 +1,2 @@
 %ul.breadcrumb
-  %li=link_to 'HOME', root_path
-  %span.divider >
-  %li=link_to controller_name.humanize, controller_path
-  %span.divider >
-  %li.active=link_to action_name.humanize, ""
+  =render_breadcrumbs separator: ' > '
