@@ -3,12 +3,12 @@ class DepartmentsController < ApplicationController
   before_action :set_department, only: [:show, :edit, :update, :destroy]
   respond_to :html, :json, :js
 
-  add_breadcrumb 'Home', :root_path
-  #add_breadcrumb 'Departments', :departments_path
+
+  add_crumb('Departments') {|instance| instance.send :departments_path}
 
   def index
     @departments = Department.all
-    add_breadcrumb "Departments", :departments_url
+
   end
 
   def show
