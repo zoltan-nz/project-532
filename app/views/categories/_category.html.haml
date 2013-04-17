@@ -1,0 +1,5 @@
+%tr{id: "category_#{category.id}"}
+  %td=best_in_place category, :parent_id, type: :select, collection: parent_category_list
+  %td=best_in_place category, :name, type: :input, ok_button: "OK", ok_button_class: 'btn', :activator => "#activator-#{category.id}"
+  %td=link_to 'Edit', edit_category_path(category), id: "activator-#{category.id}", class: 'btn', remote: true
+  %td=link_to 'Delete', category, method: :delete, class: 'btn', remote: true, data: {confirm: 'Are you sure?'}

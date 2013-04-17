@@ -19,6 +19,8 @@ gem 'puma'
 
 gem 'crummy'
 
+gem 'awesome_nested_set'
+
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'coffee-rails', '~> 4.0.0.beta1'

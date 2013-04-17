@@ -1,0 +1,12 @@
+#formModal.modal.hide.fade{role: 'dialog', 'aria-labelledby' => 'New Business', 'aria-hidden' => 'false'}
+  .modal-header
+    %a.close{type: 'button', data:{dismiss: 'modal'}, 'aria-hidden' => 'true'} &times;
+    %h3#createModalLabel Create a New Category
+  =semantic_form_for Category.new, remote: true do |f|
+    .modal-body
+      =f.input :parent, label: 'Parent Category'
+      =f.input :name, label: 'Name:', require: true
+      #error-message
+    .modal-footer
+      %a.btn.btn-large.btn-danger{data: {dismiss: 'modal'}, 'aria-hidden' => 'true'} Close
+      =f.action :submit, :button_html => {class:'btn btn-primary btn-large'}

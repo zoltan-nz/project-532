@@ -1,0 +1,1 @@
+$('#<%=dom_id(@category)%>').effect('highlight').fadeOut()
