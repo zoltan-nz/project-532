@@ -19,7 +19,7 @@ gem 'puma'
 
 gem 'crummy'
 
-gem 'awesome_nested_set'
+gem 'awesome_nested_set', github: 'collectiveidea/awesome_nested_set', branch: 'rails4'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
@@ -65,8 +65,8 @@ group :development do
   gem 'guard-livereload'
   gem 'rack-livereload'
 
-  gem 'rb-fsevent'
-  gem 'rb-inotify'
+  gem 'rb-fsevent' if RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
+  gem 'rb-inotify' unless RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
 end
 
 group :development, :test do

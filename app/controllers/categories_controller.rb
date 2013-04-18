@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
     add_crumb('Categories') {|instance| instance.send :categories_path }
 
     def index
-      @categories = Category.all
+      @categories = Category.all.order(lft: :asc)
     end
 
     def show
