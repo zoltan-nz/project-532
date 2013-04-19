@@ -67,6 +67,9 @@ group :development do
 
   gem 'rb-fsevent' if RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
   gem 'rb-inotify' unless RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
+
+  # Useful for Rails plugin in Chrome
+  gem 'meta_request' 
 end
 
 group :development, :test do
@@ -90,3 +93,5 @@ group :production do
   gem 'pg'
 end
 
+# New memcache
+gem 'dalli'
