@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20130417131922) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
-    t.integer  "parent_id"
+    t.integer  "parent_category_id"
     t.integer  "department_id"
     t.datetime "created_at"
     t.datetime "updated_at"
