@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  layout 'backend'
+
+  add_crumb('A product page mockup') {|instance| instance.send :products_path}
 
   def index
     @departments ||= Department.all

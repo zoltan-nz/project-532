@@ -5,8 +5,8 @@
     %a.pull-right.btn.btn-success.btn-large{data: {toggle: 'modal'}, href: '#formModal'} New Department
   %table.table.table-bordered#departments
     %tr
-      %th Name
-      %th Edit
+      %th Name (Click and Edit)
+      -#%th Edit
       %th Delete
     =render @departments
   =render 'form'

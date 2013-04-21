@@ -1,5 +1,5 @@
 class DepartmentsController < ApplicationController
-  layout 'backend'
+
   before_action :set_department, only: [:show, :edit, :update, :destroy]
   respond_to :html, :json, :js
 

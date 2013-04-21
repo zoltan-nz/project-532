@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-    layout 'backend'
 
     before_action :set_category, only: [:show, :edit, :update, :destroy]
     add_crumb('Categories') {|instance| instance.send :categories_path }

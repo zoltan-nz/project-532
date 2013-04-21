@@ -1,13 +1,18 @@
+.hero.well
+  %h1 Sandbox System
+  Nothing else just sandboxing
 .well
   .row
+    .span3
+      %h3 Mockups:
     .span3
       =link_to "Check a static admin template", templates_path, class: "btn btn-large btn-warning"
     .span3
       =link_to "A static product page view", products_path, class: "btn btn-large btn-success"
-      .middle (Under development)
+  .row
+    .span3
+      %h3 Dynamic staffs:
+    .span3
+      =link_to "Category management with nested model", categories_path, class: 'btn btn-large btn-danger'
     .span3
       =link_to "Dynamic page for Departments model", departments_path, class: 'btn btn-large btn-info'
-      .middle (Under development)
-  .row
-    .span4
-      =link_to "Category management with nested model", categories_path, class: 'btn btn-large btn-danger'
