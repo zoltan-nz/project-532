@@ -2,7 +2,6 @@
   %h1 Category management
   .well{style: 'height: 50px'}
     .pull-left Manage your category list or create a new one.
-    = sorted_nested_set_options(Category, :name) {|i| [i.level, "#{i.name}"] }
     %a.pull-right.btn.btn-success.btn-large{data: {toggle: 'modal'}, href: '#formModal'} New Category
   %table.table.table-bordered#categories
     %tr
