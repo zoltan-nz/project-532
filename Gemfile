@@ -21,9 +21,11 @@ gem 'crummy'
 
 gem 'awesome_nested_set', github: 'collectiveidea/awesome_nested_set', branch: 'rails4'
 
+gem 'coffee-rails', '~> 4.0.0.beta1' #Have to move outside assets, because wouldn't work in production
+
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
+
   gem 'uglifier', '>= 1.0.3'
 end
 
