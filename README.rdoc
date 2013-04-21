@@ -1,5 +1,5 @@
 == PROJECT-532
 
-My playground, where I collect new solutions where I test new ideas and tricks.
+My playground, where I collect new solutions and test new ideas and tricks.
 
 A real sandbox project.
