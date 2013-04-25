@@ -71,7 +71,9 @@ group :development do
   gem 'rb-inotify' unless RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
 
   # Useful for Rails plugin in Chrome
-  gem 'meta_request' 
+  gem 'meta_request'
+
+  gem 'paperclip'
 end
 
 group :development, :test do
@@ -89,6 +91,7 @@ group :test do
   gem 'capybara'
 
   gem 'guard-rspec'
+  gem 'paperclip'
 end
 
 group :production do

@@ -26,4 +26,6 @@ Project532::Application.configure do
   config.assets.debug = true
 
   config.sass.preferred_syntax = :sass
+
+  Paperclip.options[:command_path] = '/usr/bin/'
 end

@@ -3,6 +3,8 @@ class CategoriesController < ApplicationController
     before_action :set_category, only: [:show, :edit, :update, :destroy]
     add_crumb('Categories') {|instance| instance.send :categories_path }
 
+    respond_to :js, :html
+
     def index
       @categories = Category.all.order(lft: :asc)
     end
@@ -23,7 +25,10 @@ class CategoriesController < ApplicationController
 
       @category.save
       @categories = Category.all #Need for 'parent_category_list' in Helper to generate a dropdown list.
-      respond_to :js
+      respond_to do |f|
+        f.html { redirect_to(categories_path)}
+        f.js
+      end
     end
 
     def update
@@ -48,6 +53,6 @@ class CategoriesController < ApplicationController
 
 
     def category_params
-      params[:category].permit(:name, :parent_id)
+      params[:category].permit(:name, :parent_id, :attachment)
     end
 end

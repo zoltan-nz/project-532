@@ -9,6 +9,8 @@ class Category < ActiveRecord::Base
 
   has_many    :products
 
+  has_attached_file :attachment, style: {medium: '500x500>', thumb: '50x50>'}
+
   validates   :name, presence: true, uniqueness: true
 end
 

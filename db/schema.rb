@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130417131922) do
+ActiveRecord::Schema.define(version: 20130425132100) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(version: 20130417131922) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
   add_index "categories", ["department_id"], name: "index_categories_on_department_id"

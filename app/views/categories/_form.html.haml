@@ -6,6 +6,7 @@
     .modal-body
       =f.input :parent, label: 'Parent Category'
       =f.input :name, label: 'Name:', require: true
+      =f.input :attachment
       #error-message
     .modal-footer
       %a.btn.btn-large.btn-danger{data: {dismiss: 'modal'}, 'aria-hidden' => 'true'} Close
