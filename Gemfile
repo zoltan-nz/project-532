@@ -40,6 +40,10 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'devise'
 gem 'figaro'
 
+gem 'paperclip'
+
+gem 'jquery-fileupload-rails'
+
 group :development do
   gem 'sqlite3'
   #more detailed error message
@@ -73,7 +77,7 @@ group :development do
   # Useful for Rails plugin in Chrome
   gem 'meta_request'
 
-  gem 'paperclip'
+
 end
 
 group :development, :test do
