@@ -11,7 +11,7 @@
 
 # Should all fields be considered "required" by default?
 # Defaults to true.
-Formtastic::FormBuilder.all_fields_required_by_default = false
+# Formtastic::FormBuilder.all_fields_required_by_default = true
 
 # Should select fields have a blank option/prompt by default?
 # Defaults to true.
@@ -22,7 +22,7 @@ Formtastic::FormBuilder.all_fields_required_by_default = false
 # '<abbr title="required">*</abbr>'. In other words, if you configure formtastic.required
 # in your locale, it will replace the abbr title properly. But if you don't want to use
 # abbr tag, you can simply give a string as below
-Formtastic::FormBuilder.required_string = "(required)"
+# Formtastic::FormBuilder.required_string = "(required)"
 
 # Set the string that will be appended to the labels/fieldsets which are optional
 # Defaults to an empty string ("") and also accepts procs (see required_string above)
@@ -64,7 +64,7 @@ Formtastic::FormBuilder.required_string = "(required)"
 
 # You can add custom inputs or override parts of Formtastic by subclassing Formtastic::FormBuilder and
 # specifying that class here.  Defaults to Formtastic::FormBuilder.
-Formtastic::Helpers::FormHelper.builder = FormtasticBootstrap::FormBuilder
+# Formtastic::Helpers::FormHelper.builder = MyCustomBuilder
 
 # You can opt-in to Formtastic's use of the HTML5 `required` attribute on `<input>`, `<select>` 
 # and `<textarea>` tags by setting this to false (defaults to true).

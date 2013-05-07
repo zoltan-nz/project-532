@@ -1,6 +1,18 @@
 Project532::Application.routes.draw do
 
+  namespace :admin do
+    resources :users
+  end
+
+  devise_for :users
   root to: "home#index"
+
+  namespace :admin do
+    get '/' => 'dashboard#index'
+    resources :users
+  end
+
+
 
   resources :categories, :departments, :products
 
