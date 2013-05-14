@@ -26,6 +26,8 @@ gem 'figaro'
 gem 'paperclip'
 gem 'jquery-fileupload-rails'
 
+gem 'nested_form'
+
 group :development do
   gem 'sqlite3'
   gem 'better_errors'

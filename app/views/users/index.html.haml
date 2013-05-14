@@ -1,2 +1,17 @@
 %h1 Users
 
+.well
+  =link_to "New", new_user_path, class: 'btn btn-success btn-large'
+%table.table-striped.table
+  %th Email
+  %th Kids
+  %th
+  %th
+  %th
+
+  -@users.each do |u|
+    %td=user.email
+    %td
+    %td=link_to "Edit", edit_user_path, class: 'btn'
+    %td
+    %td
