@@ -1,6 +1,5 @@
 Project532::Application.routes.draw do
 
-  get "orders/index"
   root to: "home#index"
 
   devise_for :users
@@ -10,7 +9,7 @@ Project532::Application.routes.draw do
     resources :users
   end
 
-  resources :categories, :departments, :products, :meals, :orders
+  resources :categories, :departments, :products, :meals, :orders, :kids, :users
 
   get 'templates' => 'templates#index'
 

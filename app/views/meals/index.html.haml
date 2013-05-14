@@ -1,17 +1,20 @@
 %h1 Listing meals
 
-%table
+.well
+  = link_to 'New Meal', new_meal_path, class: 'btn btn-success btn-large'
+
+%table.table.table-striped
   %tr
+    %th Name
+    %th Price
     %th
     %th
     %th
 
   - @meals.each do |meal|
     %tr
-      %td= link_to 'Show', meal
-      %td= link_to 'Edit', edit_meal_path(meal)
-      %td= link_to 'Destroy', meal, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Meal', new_meal_path
+      %td= meal.name
+      %td= meal.price
+      %td= link_to 'Show', meal, class: 'btn'
+      %td= link_to 'Edit', edit_meal_path(meal), class: 'btn'
+      %td= link_to 'Destroy', meal, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
