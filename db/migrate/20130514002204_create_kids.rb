@@ -3,8 +3,8 @@ class CreateKids < ActiveRecord::Migration
     create_table :kids do |t|
       t.string  :name
       t.integer :age
-      t.integer :relative_id
-      t.integer :order_id
+      t.references :user
+      t.references :order
 
       t.timestamps
     end

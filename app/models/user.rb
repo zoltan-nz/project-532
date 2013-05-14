@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
   #devise :database_authenticatable, :registerable,
   #       :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :kids, through: :relatives
+  has_many :kids
   has_many :meals, through: :orders
   has_many :relatives
-  has_many :orders
 end
