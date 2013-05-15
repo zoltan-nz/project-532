@@ -27,6 +27,21 @@ class UsersController < ApplicationController
   end
 
   def update
+        respond_to do |format|
+      if needs_password?(@user, user_params)
+        @user.update_with_password(user_params)
+        flash[:success] = 'Employee was successfully updated. Password was successfully updated'
+        format.js {render 'update'}
+      else
+          if @user.update_without_password(user_params)
+            flash[:success] = 'Employee was successfully updated.'
+            format.js {render 'update'}
+          else
+            flash[:error] = @user.errors.full_messages.join(', ')
+            format.js {render json: @user.errors.full_messages, status: :unprocessable_entity}
+          end
+      end
+    end
 
   end
 
@@ -43,6 +58,10 @@ class UsersController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params[:user].permit(:email)
+  end
+
+  def needs_password?(user, user_params)
+    !user_params[:password].blank?
   end
 
 end
