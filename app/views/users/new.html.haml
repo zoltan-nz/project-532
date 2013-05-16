@@ -1,9 +1,3 @@
 %h1 Create a new user
 
-=semantic_nested_form_for @user do |f|
-  =f.inputs
-  =f.semantic_fields_for @kids do |k|
-    =k.inputs
-      =k.input :name
-    =k.actions
-  =f.actions
+= render 'form'

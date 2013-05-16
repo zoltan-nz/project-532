@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :kids
   has_many :meals, through: :orders
-  has_many :relatives
+
+  accepts_nested_attributes_for :kids, :meals
 end

@@ -8,9 +8,9 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @kids = @user.kids.build
-    @userorders = @user.orders.build
-    @kidsorders = @kids.orders.build
+    @kid = @user.kids.build
+    #@userorders = @user.orders.build
+    #@kidsorders = @kids.orders.build
   end
 
   def create

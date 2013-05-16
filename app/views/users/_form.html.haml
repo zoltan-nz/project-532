@@ -1,0 +1,7 @@
+=semantic_form_for @user do |f|
+  =f.inputs
+  =f.semantic_fields_for :kid do |kid|
+    =kid.inputs :name, :age, name: 'Kids'
+  =f.semantic_fields_for :order do |order|
+    =order.inputs :date, name: 'Orders'
+  =f.actions
