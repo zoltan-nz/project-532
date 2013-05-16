@@ -8,7 +8,7 @@
 #= require jquery.pnotify.min
 #= require_tree .
 
-$-> 
+$ ->
   $(".best_in_place").best_in_place()
 
 $(document).ajaxComplete (event,request,options) ->
