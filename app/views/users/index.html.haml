@@ -10,8 +10,9 @@
   %th
 
   -@users.each do |u|
-    %td=user.email
-    %td
-    %td=link_to "Edit", edit_user_path, class: 'btn'
-    %td
-    %td
+    %tr
+      %td=u.email
+      %td
+      %td=link_to "Edit", edit_user_path(u), class: 'btn'
+      %td
+      %td

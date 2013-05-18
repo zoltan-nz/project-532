@@ -15,7 +15,17 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: 'Kid was successfully created.' }
+        format.json { render action: 'index', status: :created}
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
 
   def show
@@ -57,7 +67,7 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params[:user].permit(:email)
+    params[:user].permit(:name, :email)
   end
 
   def needs_password?(user, user_params)
