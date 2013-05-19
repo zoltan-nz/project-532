@@ -28,6 +28,8 @@ gem 'jquery-fileupload-rails'
 
 gem 'nested_form'
 
+gem 'simple_form', '3.0.0.rc'
+
 group :development do
   gem 'sqlite3'
   gem 'better_errors'

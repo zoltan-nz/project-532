@@ -8,5 +8,8 @@ class User < ActiveRecord::Base
   has_many :kids
   has_many :meals, through: :orders
 
-  accepts_nested_attributes_for :kids, :meals
+  accepts_nested_attributes_for :kids
+  accepts_nested_attributes_for :meals
+
+  validates :name, presence: true
 end

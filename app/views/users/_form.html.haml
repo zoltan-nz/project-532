@@ -1,3 +1,17 @@
+%h3 Simple form
+=simple_nested_form_for @user do |simple|
+  =simple.input :name
+  =simple.input :password
+  =simple.button :submit
+  =simple.simple_fields_for :kids do |k|
+    =k.input :name
+    =k.input :age
+    =simple.link_to_add 'Add a kid', :kids
+
+
+
+
+%h3 Semantic form
 =semantic_form_for @user do |f|
   =f.inputs do
     =f.input :name, label: 'Name:'
