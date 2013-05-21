@@ -7,9 +7,11 @@ class User < ActiveRecord::Base
 
   has_many :kids
   has_many :meals, through: :orders
+  has_many :orders
 
   accepts_nested_attributes_for :kids
   accepts_nested_attributes_for :meals
+  accepts_nested_attributes_for :orders
 
   validates :name, presence: true
 end

@@ -6,6 +6,7 @@
 #= require bootstrap
 #= require bootstrap-datepicker
 #= require jquery.pnotify.min
+#= require jquery_nested_form
 #= require_tree .
 
 $ ->

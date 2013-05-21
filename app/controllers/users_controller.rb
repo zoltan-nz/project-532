@@ -8,7 +8,11 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @kid = @user.kids.build
+    @user.kids.build
+    @user.orders.build
+    @user.orders.each do |o|
+      o.build_meal
+    end
     #@userorders = @user.orders.build
     #@kidsorders = @kids.orders.build
   end
@@ -67,7 +71,7 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params[:user].permit(:name, :email)
+    params[:user].permit(:name, :email, :kids_attributes => [:name, :age], :orders_attributes => [:date, :meal_attributes => [:name]], :meals_attributes => [:name, :price], :meal_attributes => [:name, :price])
   end
 
   def needs_password?(user, user_params)

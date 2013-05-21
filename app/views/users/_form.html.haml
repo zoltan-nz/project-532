@@ -1,23 +1,29 @@
-%h3 Simple form
-=simple_nested_form_for @user do |simple|
-  =simple.input :name
-  =simple.input :password
-  =simple.button :submit
-  =simple.simple_fields_for :kids do |k|
-    =k.input :name
-    =k.input :age
-    =simple.link_to_add 'Add a kid', :kids
-
-
-
+-#%h3 Simple form
+-#=simple_nested_form_for @user do |simple|
+-#  =simple.input :name
+-#  =simple.button :submit
+-#  =simple.simple_fields_for :kids do |k|
+-#    =k.input :name
+-#    =k.input :age
+-#  =simple.link_to_add 'Add a kid', :kids
+-#  =simple.simple_fields_for :orders do |o|
+-#    =o.input :date
+-#    =o.simple_fields_for :meals do |m|
+-#      =m.input :name
+-#  =simple.link_to_add 'Add an Order', :meals
 
 %h3 Semantic form
-=semantic_form_for @user do |f|
+=semantic_bootstrap_nested_form_for @user do |f|
   =f.inputs do
     =f.input :name, label: 'Name:'
     =f.input :email, label: 'Email:'
-  =f.semantic_fields_for :kid do |kid|
+  =f.semantic_fields_for :kids do |kid|
     =kid.inputs :name, :age, name: 'Kids'
-  =f.semantic_fields_for :order do |order|
-    =order.inputs :date, name: 'Orders'
+  =f.link_to_add "Add a Kid", :kids
+  =f.semantic_fields_for :orders do |order|
+    =order.input :date, as: :string
+    =order.semantic_fields_for :meal do |meals|
+      =meals.input :name
+    =order.link_to_add "Add a meal", :meal
+  =f.link_to_add 'Add an Order', :orders
   =f.actions
