@@ -11,10 +11,8 @@ class UsersController < ApplicationController
     @user.kids.build
     @user.orders.build
     @user.orders.each do |o|
-      o.build_meal
+      o.meals.build
     end
-    #@userorders = @user.orders.build
-    #@kidsorders = @kids.orders.build
   end
 
   def create
