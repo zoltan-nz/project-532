@@ -8,11 +8,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @user.kids.build
     @user.orders.build
-    @user.orders.each do |o|
-      o.meals.build
-    end
   end
 
   def create

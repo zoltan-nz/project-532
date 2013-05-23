@@ -25,3 +25,13 @@
       =link_to "Manage users model", users_path, class: 'btn btn-large'
     .span3
       =link_to "Manage orders with nested form", orders_path, class: 'btn btn-large btn-success'
+  .row
+    .span3
+      %h3 Latest task
+    .span3
+      =link_to 'User model', users_path, class: 'btn btn-large btn-success'
+    .span
+      %ul
+        %li User create with a polymorphic model
+        %li Meal list is fixed in seed
+        %li Join table has an extra field: vegetarian (Join table: order)
