@@ -2,10 +2,12 @@
   =f.inputs do
     =f.input :name, label: 'Name:'
     =f.input :email, label: 'Email:'
-  =f.semantic_fields_for :orders do |order|
-    =order.input :date, as: :string
-    =order.semantic_fields_for :meal do |meals|
-      -options_from_collection_for_select(Meal.all, :id, :name).each do |list|
-        =check_box_tag list.name    
-    =order.link_to_add "Add a meal", :meal
+  .well
+    =f.semantic_fields_for :orders do |order|
+      =order.input :date, as: :string
+      .well
+        =order.semantic_fields_for :meal do |m|
+          =m.input :name, as: :select, collection: Meal.all
+          =m.input :price, as: :string
+      =order.link_to_add "Add a meal", :meal
   =f.actions
