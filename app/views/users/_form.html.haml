@@ -2,9 +2,10 @@
   =f.inputs do
     =f.input :name, label: 'Name:'
     =f.input :email, label: 'Email:'
+    =f.input :tag_list, label: 'Tags:'
   .well
-    =f.semantic_fields_for :orders do |order|
-      =order.input :date, as: :string
+    -#=f.semantic_fields_for :orders do |order|
+      -#=order.input :date, as: :string
       .well
         =order.semantic_fields_for :meal do |m|
           =m.input :name, as: :select, collection: Meal.all

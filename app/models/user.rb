@@ -13,5 +13,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :meals
   accepts_nested_attributes_for :orders
 
+  acts_as_taggable
+  acts_as_taggable_on :meals, :orders
+
   validates :name, presence: true
 end

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @orders = @user.orders.build
-    @meal = @orders.build_meal
+    #@meal = @orders.build_meal
   end
 
   def create
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params[:user].permit(:name, :email, :kids_attributes => [:name, :age], :orders_attributes => [:date, :meal_attributes => [:name]], :meals_attributes => [:name, :price], :meal_attributes => [:name, :price])
+    params[:user].permit(:tag_list, :name, :email, :kids_attributes => [:name, :age], :orders_attributes => [:date, :meal_attributes => [:name]], :meals_attributes => [:name, :price], :meal_attributes => [:name, :price])
   end
 
   def needs_password?(user, user_params)
