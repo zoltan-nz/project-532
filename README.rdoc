@@ -7,3 +7,5 @@ A real sandbox project.
 TODO:
 - Nested form in User - Meal - Order
 - Checking nested form parameter management
+Option:
+- Using tagged models for nested relation.
