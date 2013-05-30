@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @orders = @user.orders.build
-    #@meal = @orders.build_meal
+    @meal = @user.meals.build
   end
 
   def create

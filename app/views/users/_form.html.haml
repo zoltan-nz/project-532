@@ -3,6 +3,18 @@
     =f.input :name, label: 'Name:'
     =f.input :email, label: 'Email:'
     =f.input :tag_list, label: 'Tags:'
+    %table.table
+      %tr
+        %th Name
+        %th Price
+        %th Checkbox
+      =f.semantic_fields_for :meals do |m|
+        - Meal.all.each do |meal|
+          %tr
+            %td=meal.name
+            %td=meal.price
+            %td=check_box_tag "user[meals_attributes][#{meal.id}]", meal.id
+
   .well
     -#=f.semantic_fields_for :orders do |order|
       -#=order.input :date, as: :string
