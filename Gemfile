@@ -44,6 +44,11 @@ group :development do
   gem 'rb-fsevent' if RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
   gem 'rb-inotify' unless RUBY_PLATFORM.match(/darwin/) or RUBY_PLATFORM.match(/mingw32/)
   gem 'meta_request'
+
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-remote'
+
 end
 
 group :development, :test do
