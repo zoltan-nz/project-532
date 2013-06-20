@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.0.0"
 
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0.rc2'
 gem 'haml'
 gem 'haml-rails'
 gem 'dalli'
@@ -13,8 +13,8 @@ gem 'bootstrap-datepicker-rails'
 gem 'puma'
 gem 'crummy'
 gem 'awesome_nested_set', github: 'collectiveidea/awesome_nested_set', branch: 'rails4'
-gem 'coffee-rails', '4.0.0'
-gem 'sass-rails', '4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails', '4.0.0.rc2'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -28,7 +28,7 @@ gem 'jquery-fileupload-rails'
 
 gem 'nested_form'
 
-gem 'simple_form', '3.0.0.rc'
+gem 'simple_form', '~> 3.0.0.rc'
 
 gem 'acts-as-taggable-on'
 
