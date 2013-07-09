@@ -7,11 +7,13 @@ Project532::Application.configure do
   config.cache_classes = false
 
   # Do not eager load code on boot.
-  config.eager_load = false
+  config.eager_load = true
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
+
+  config.cache_store = :dalli_store
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -28,4 +30,11 @@ Project532::Application.configure do
   config.sass.preferred_syntax = :sass
 
   Paperclip.options[:command_path] = '/usr/bin/'
+
+  #Livereload config:
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+  #BetterErrors on remote machine browser
+  BetterErrors::Middleware.allow_ip! '192.0.0.0/8'
+
 end
