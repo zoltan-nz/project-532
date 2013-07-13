@@ -1,6 +1,6 @@
 =semantic_bootstrap_nested_form_for @user do |user_form|
   =user_form.inputs
   =user_form.actions
-  =user_form.semantic_fields_for :orders do |order_form|
+  =user_form.inputs for: :orders do |order_form|
     =order_form.input :date
     =order_form.actions
